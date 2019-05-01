@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT } from '../actions'
+import { INCREMENT, DECREMENT, RESET } from '../actions'
 
 const counterReducer = (state = 50, action) => {
   switch(action.type) {
@@ -7,6 +7,9 @@ const counterReducer = (state = 50, action) => {
 
     case DECREMENT: 
       return state -= action.payload
+
+    case RESET:
+      return action.payload
 
     default: 
       return state
