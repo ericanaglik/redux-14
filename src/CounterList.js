@@ -1,11 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { increment, decrement, reset } from './actions'
+import Counter from './Counter'
 
 const CounterList = (props) => {
     return (
         <div>
-            {props.counters.map(count => <h1>{count}</h1>)}
+            {props.counters.map(count => <Counter count={count} />)}
         </div>
     )
 }
