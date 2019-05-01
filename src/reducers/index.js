@@ -4,7 +4,7 @@ import counterReducer from './counterReducer'
 // { counter: 0, profile: {}, currentItem: id }
 
 const reducers = combineReducers({
-  counter: counterReducer
+  counters: counterReducer
 })
 
 export default reducers

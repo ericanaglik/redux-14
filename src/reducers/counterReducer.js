@@ -1,15 +1,21 @@
 import { INCREMENT, DECREMENT, RESET } from '../actions'
 
-const counterReducer = (state = 50, action) => {
+const counterReducer = (state = [5, 3, 7], action) => {
+  const newState = [...state]
+  console.log(action)
+
   switch(action.type) {
     case INCREMENT: 
-      return state += action.payload
+      newState[0] += action.payload
+      return newState
 
     case DECREMENT: 
-      return state -= action.payload
+      newState[0] -= action.payload
+      return newState
 
     case RESET:
-      return action.payload
+      newState[0] = action.payload
+      return newState
 
     default: 
       return state

@@ -1,6 +1,5 @@
 import React from 'react'
-import { increment, decrement, reset } from './actions'
-import { connect } from 'react-redux'
+
 
 const Counter = (props) => {
   return (
@@ -13,13 +12,5 @@ const Counter = (props) => {
   )
 }
 
-const mapStateToProps = (state) => {
-  return { count: state.counter }
-}
-
-const mapStateToDispatch = () => {
-  return { increment, decrement, reset }
-}
-
-export default connect(mapStateToProps, mapStateToDispatch())(Counter)
+export default Counter
 
